@@ -19,4 +19,9 @@ final class RouterTest extends TestCase
 	{
 		$this->assertEquals('test', Crazy\add()["add"]()["add"]()["add"]()["add"]()["run"]());
 	}
+
+	public function testIsFunctionCanReturnFunctionConditionaly()
+	{
+		$this->assertEquals('array', Crazy\router('URL1')('URL2')('URL3')());
+	}
 }

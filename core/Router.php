@@ -26,3 +26,12 @@ function add()
 		}
 	];
 }
+
+function router($url = '', $method = 'GET', $action = 'Crazy\test')
+{
+	$array = 'array';
+
+	if ($url === '')
+		return $array;
+	return 'Crazy\router';
+}
