@@ -9,4 +9,14 @@ final class RouterTest extends TestCase
 		$routerTest = new Crazy\Router();
 		$this->assertInstanceOf(Crazy\Router::class, $routerTest);
 	}
+
+	public function testIsFunctionCanBeTested()
+	{
+		$this->assertEquals(true, Crazy\test());
+	}
+
+	public function testIsFunctionCanReturnFunction()
+	{
+		$this->assertEquals('test', Crazy\add()["add"]()["add"]()["add"]()["add"]()["run"]());
+	}
 }

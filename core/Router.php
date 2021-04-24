@@ -9,3 +9,20 @@ class Router
 		
 	}
 }
+
+function test()
+{
+	return true;
+}
+
+function add()
+{
+	$test = 'test';
+
+	return [
+		'add' => 'Crazy\add',
+		'run' => function() use ($test){
+			return $test;
+		}
+	];
+}
