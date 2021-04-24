@@ -1,6 +1,6 @@
 {
     "name": "lefodeurcou/crazy-router",
-    "description": "An engine which analyse URL and allow you to use callbacks at each level of the route used. And of course handle parameters throught this URL.",
+    "description": "A fast router wit great possibilities",
     "type": "package",
     "require-dev": {
         "phpunit/phpunit": "^6.5"
