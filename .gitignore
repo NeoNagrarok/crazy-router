@@ -1,4 +1,5 @@
 crazy-router.code-workspace
+index.php
 .htaccess
 phpunit
 vendor/
