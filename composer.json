@@ -4,7 +4,7 @@
     "type": "package",
     "require-dev": {
         "phpunit/phpunit": "^6.5",
-        "phpbench/phpbench": "^0.14.0"
+        "phpbench/phpbench": "^1.0"
     },
     "authors": [
         {
@@ -17,11 +17,5 @@
             "Crazy\\": "core/"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Crazy\\Tests\\": "b-tests/"
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "require": {}
 }
