@@ -3,7 +3,8 @@
     "description": "A fast router wit great possibilities",
     "type": "package",
     "require-dev": {
-        "phpunit/phpunit": "^6.5"
+        "phpunit/phpunit": "^6.5",
+        "phpbench/phpbench": "^0.14.0"
     },
     "authors": [
         {
@@ -16,5 +17,11 @@
             "Crazy\\": "core/"
         }
     },
-    "require": {}
+    "autoload-dev": {
+        "psr-4": {
+            "Crazy\\Tests\\": "b-tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
