@@ -2,31 +2,40 @@
 
 use Crazy\Router;
 
+/**
+ * 
+ */
 class RouterBench
 {
 
+	private $router;
+
+	public function makeRouter()
+	{
+		$this->router = new Crazy\Router();
+	}
+
     /**
+	 * @BeforeMethods("makeRouter")
      * @Revs(1000)
      * @Iterations(5)
      */
-	public function benchAdd()
+
+	public function benchOne()
 	{
-		// Crazy\add()["add"]()["add"]()["add"]()["add"]()["run"]();
-		$router = new Crazy\Router();
-		Crazy\add()['add']()["add"]()["add"]()["add"]()["run"]();
 		for ($i = 0; $i < 10000; $i++)
 			continue;
 	}
 
 
     /**
+	 * @BeforeMethods("makeRouter")
      * @Revs(1000)
      * @Iterations(5)
      */
 	public function benchRouter()
 	{
-		$router = new Crazy\Router();
-		Crazy\router('URL1')('URL2')('URL3')();
+		// Crazy\router('URL1')('URL2')('URL3')();
 	}
 }
 

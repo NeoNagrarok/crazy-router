@@ -4,34 +4,31 @@ namespace Crazy;
 
 class Router
 {
+	const GET = 0;
+	const POST = 1;
+	const PUT = 2;
+	const PATCH = 3;
+	const DELETE = 4;
+
+	private array $routes = [];
+
 	function __construct()
 	{
 		
 	}
-}
 
-function test()
-{
-	return true;
-}
+	public function getAllRoutes(): array
+	{
+		return $this->routes;
+	}
 
-function add()
-{
-	$test = 'test';
-
-	return [
-		'add' => 'Crazy\add',
-		'run' => function() use ($test){
-			return $test;
-		}
-	];
-}
-
-function router($url = '', $method = 'GET', $action = 'Crazy\test')
-{
-	$array = 'array';
-
-	if ($url === '')
-		return $array;
-	return 'Crazy\router';
+	public function addRoute(int $method, string $route = null, callable $callable = null, array $patterns = [], string $name = null)
+	{
+		$this->routes[] = [
+			'method'	=>	$method,
+			'route'		=>	preg_replace(['#{[\s\S]*?}#'], $patterns, $route),
+			'callable'	=>	$callable,
+			'name'		=>	$name,
+		];
+	}
 }

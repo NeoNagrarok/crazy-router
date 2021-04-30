@@ -1,6 +1,5 @@
 crazy-router.code-workspace
 index.php
 .htaccess
-unit
 bench
 vendor/
